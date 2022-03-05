@@ -1,0 +1,16 @@
+services:
+  pc-web-front:
+    build: ./pc-web-front/
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pc-web-front/:/app/
+
+
+volumes:
+  volume: {}
+
+
+
+
+

@@ -1,0 +1,28 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+* {
+	font-family: 'Zen Dots', cursive;
+}
+
+/* Color palet */
+
+:root {
+	--color-bg: #0C141C;
+	--color-title: #00FFFF;
+	--color-text: #618EFF;
+
+	--color-A: #618EFF ;
+	--color-B: #615EFF ;
+	--color-C: #A351FF ;
+	--color-D: #FF83FA ;
+}
+
+/* */
+html, body, #app {
+	min-height: 100vh;
+}
+html {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
