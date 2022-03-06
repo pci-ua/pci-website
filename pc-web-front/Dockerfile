@@ -10,7 +10,9 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm i
+
+RUN npm run-script build
 
 EXPOSE 8080
 
