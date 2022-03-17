@@ -1,40 +1,37 @@
 <template>
   <v-footer color="primary lighten-1" padless>
     <v-row justify="center" no-gutters>
+    
       <v-btn color="white" text rounded>
-        <RouterLink to="/"
-          ><strong style="color: #618eff">Home</strong></RouterLink
-        ></v-btn
-      >
-      <v-btn color="white" text rounded>
-        <RouterLink to="/apropos"
-          ><strong style="color: #618eff">À propos</strong></RouterLink
-        >
+        <RouterLink to="/" class="footer-link">Home</RouterLink>
       </v-btn>
       <v-btn color="white" text rounded>
-        <RouterLink to="/contact"
-          ><strong style="color: #618eff">Contact</strong></RouterLink
-        >
+        <RouterLink to="/apropos" class="footer-link">À propos</RouterLink>
       </v-btn>
       <v-btn color="white" text rounded>
-        <RouterLink to="/mentions"
-          ><strong style="color: #618eff">Mentions légales</strong></RouterLink
-        >
+        <RouterLink to="/contact" class="footer-link">Contact</RouterLink>
       </v-btn>
+      <v-btn color="white" text rounded>
+        <RouterLink to="/mentions" class="footer-link">Mentions légales</RouterLink>
+      </v-btn>
+      
       <br />
+      
       <v-col cols="12">
         &copy; {{ new Date().getFullYear() }} —
-        <RouterLink to="/"
-          ><strong style="color: #618eff">
-            Projet et Cohésion en Informatique
-          </strong></RouterLink
-        >
+        <RouterLink to="/" class="footer-link">Projet et Cohésion en Informatique</RouterLink>
       </v-col>
+      
     </v-row>
   </v-footer>
 </template>
 
 <style>
+.footer-link {
+  color: #618eff;
+  font-weight: bold;
+}
+
 v-footer {
   position: fixed;
   text-align: center;
