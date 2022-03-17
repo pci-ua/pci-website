@@ -1,10 +1,14 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
 * {
-	font-family: 'Zen Dots', cursive;
+	font-family: 'Nunito', monospace;
 }
 
+h1,h2,h3,h4,h5,h6, strong {
+	font-family: var(--font-title);
+}
 /* Color palet */
 
 :root {
@@ -16,6 +20,9 @@
 	--color-B: #615EFF ;
 	--color-C: #A351FF ;
 	--color-D: #FF83FA ;
+
+	--font-title: 'Zen Dots', cursive;
+	--font-texte: 'Nunito', monospace;
 }
 
 /* */

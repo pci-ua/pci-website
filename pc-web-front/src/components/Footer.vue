@@ -37,6 +37,7 @@ footer {
   width: 100%;
 
   background-color: #0c141ce0;
+  line-height: 1.8rem;
 }
 
 v-btn {
