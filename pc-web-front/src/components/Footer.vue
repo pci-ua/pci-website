@@ -32,11 +32,9 @@
   font-weight: bold;
 }
 
-v-footer {
-  position: fixed;
+footer {
   text-align: center;
   width: 100%;
-  bottom: 0;
 
   background-color: #0c141ce0;
 }
