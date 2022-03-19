@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import MentionsLegalesView from '../views/MentionsLegalesView.vue'
 import MinecraftProjetView from '../views/MinecraftProjetView.vue'
 
 const router = createRouter({
@@ -9,6 +10,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/mentions',
+      name: 'MentionsLegales',
+      component: MentionsLegalesView
     },
 	{
 		path: '/projet/minecraft',
