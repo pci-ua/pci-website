@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <h1 style="text-align: center">Mentions Légales</h1>
   <section>

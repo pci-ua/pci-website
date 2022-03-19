@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import MentionsLegalesView from '../views/MentionsLegalesView.vue'
-import MinecraftProjetView from '../views/MinecraftProjetView.vue'
+
+import HomeView from '../views/Home.vue'
+import MentionsLegalesView from '../views/MentionsLegales.vue'
+
+import Projet_MinecraftView from '../views/projet/Minecraft.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +21,7 @@ const router = createRouter({
 	{
 		path: '/projet/minecraft',
 		name: 'Minecraft',
-		component: MinecraftProjetView
+		component: Projet_MinecraftView
 	}
   ]
 })

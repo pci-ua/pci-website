@@ -1,8 +1,3 @@
-<script setup>
-
-
-</script>
-
 <template>
 <div id="home-content">
   <main>
