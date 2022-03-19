@@ -23,7 +23,7 @@ import Footer from '@/components/Footer.vue'
 @import '@/assets/base.css';
 
 #background {
-    position: absolute;
+    position: fixed;
     bottom: -12rem;
     left: -3rem;
 	z-index: -1;

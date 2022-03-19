@@ -1,50 +1,52 @@
 <template>
   <v-footer color="primary lighten-1" padless>
-    <v-row justify="center" no-gutters>
-      <v-btn color="white" text rounded>
-        <RouterLink to="/"
-          ><strong style="color: #618eff">Home</strong></RouterLink
-        ></v-btn
-      >
-      <v-btn color="white" text rounded>
-        <RouterLink to="/apropos"
-          ><strong style="color: #618eff">À propos</strong></RouterLink
-        >
-      </v-btn>
-      <v-btn color="white" text rounded>
-        <RouterLink to="/contact"
-          ><strong style="color: #618eff">Contact</strong></RouterLink
-        >
-      </v-btn>
-      <v-btn color="white" text rounded>
-        <RouterLink to="/mentions"
-          ><strong style="color: #618eff">Mentions légales</strong></RouterLink
-        >
-      </v-btn>
-      <br />
-      <v-col cols="12">
+
+    <v-row>
+	    <v-col> <v-btn color="white" text rounded>
+        	<RouterLink to="/" class="footer-link">Home</RouterLink>
+      	</v-btn></v-col>
+    	<v-col><v-btn color="white" text rounded>
+        	<RouterLink to="/apropos" class="footer-link">À propos</RouterLink>
+      	</v-btn></v-col>
+      	<v-col><v-btn color="white" text rounded>
+        	<RouterLink to="/contact" class="footer-link">Contact</RouterLink>
+      	</v-btn></v-col>
+      	<v-col><v-btn color="white" text rounded>
+        	<RouterLink to="/mentions" class="footer-link">Mentions légales</RouterLink>
+      	</v-btn></v-col>
+    </v-row>
+
+
+    <v-row>
+      <v-col>
         &copy; {{ new Date().getFullYear() }} —
-        <RouterLink to="/"
-          ><strong style="color: #618eff">
-            Projet et Cohésion en Informatique
-          </strong></RouterLink
-        >
+        <RouterLink to="/" class="footer-link">Projet et Cohésion en Informatique</RouterLink>
       </v-col>
     </v-row>
+
   </v-footer>
 </template>
 
 <style>
-v-footer {
-  position: fixed;
+.footer-link {
+  color: #618eff;
+  font-weight: bold;
+}
+
+footer {
   text-align: center;
   width: 100%;
-  bottom: 0;
 
   background-color: #0c141ce0;
+  line-height: 1.8rem;
 }
 
 v-btn {
-  margin-right: 2em;
+  margin: 2em;
+  text-align: center;
+}
+
+v-row {
+	display: block;
 }
 </style>
