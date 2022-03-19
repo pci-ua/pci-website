@@ -1,0 +1,3 @@
+<template>
+	Lorem ipsum
+</template>
