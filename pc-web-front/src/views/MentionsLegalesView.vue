@@ -65,6 +65,18 @@
         <a href="mailto:contact@projetcohesion.info">contact@projetcohesion.info</a>
       </p>
     </article>
+    <article>
+      <h3>Information sur l'association</h3>
+	  <p>
+      <label> Nom exact : </label> <em> Projets et Cohésion en Informatique </em> <br/>
+	  <label> N° SIREN : </label> <em> 901640698 </em> <br/>
+	  <label> N° SIRET : </label> <em> 901 640 698 00014 </em> <br/>
+	  <label> N° RNA : </label> <em> W491019959 </em> <br/>
+	  <label> Code APE : </label> <em> 94.99Z </em> Autres organisations fonctionnant par adhésion volontaire <br/>
+	  <a href="https://journal-officiel-datadila.opendatasoft.com/api/v2/catalog/datasets/jo_associations/records?select=%2A&where=numero_rna%20like%20%22W491019959%22&limit=10&offset=0&lang=fr&timezone=UTC"> Déclaration au journal officiel des associations (json) </a> <br/>
+	  <a href="https://entreprise.data.gouv.fr/api/rna/v1/id/W491019959"> Statut actuel auprès du gouvernement (json) </a> <br/>
+	  </p>
+    </article>
   </section>
 </template>
 
