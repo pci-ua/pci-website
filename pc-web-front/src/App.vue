@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import PathNavigator from '@/components/PathNavigator.vue'
+import Footer from '@/components/Footer.vue'
 
 </script>
 
@@ -12,15 +13,17 @@ import PathNavigator from '@/components/PathNavigator.vue'
 	<NavBar />
 	<PathNavigator />
   </header>
-
   <RouterView />
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <style>
 @import '@/assets/base.css';
 
 #background {
-    position: absolute;
+    position: fixed;
     bottom: -12rem;
     left: -3rem;
 	z-index: -1;

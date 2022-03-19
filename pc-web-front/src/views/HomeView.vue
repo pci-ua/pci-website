@@ -40,4 +40,9 @@ h2 {
 	color: var(--color-title);
 	font-size: 40pt;
 }
+
+aside {
+    font-size: 120%;
+    line-height: 1.8rem;
+}
 </style>
