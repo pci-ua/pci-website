@@ -1,16 +1,10 @@
-/* Fonts */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
-* {
-	font-family: 'Nunito', monospace;
-}
 
-h1,h2,h3,h4,h5,h6, strong {
-	font-family: var(--font-title);
-}
-/* Color palet */
 
+/* Setup global CSS vars */
 :root {
 	--color-bg: #0C141C;
 	--color-title: #00FFFF;
@@ -25,15 +19,27 @@ h1,h2,h3,h4,h5,h6, strong {
 	--font-texte: 'Nunito', monospace;
 }
 
-/* */
-html {
-	background-color: var(--color-bg);
-	color: var(--color-text);
-}
 
+
+/* Change default navigator style */
 html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	border: none;
+}
+
+
+
+/* Setup default style */
+html {
+	font-family: 'Nunito', monospace;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+h1, h2, h3,
+h4, h5, h6,
+strong {
+	font-family: var(--font-title);
 }
