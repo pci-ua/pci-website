@@ -1,54 +1,57 @@
 <template>
 
-	<img id="main-logo" src="@/assets/project-icon/Asteriads.svg" width="32" height="32" />
-	<h1> Asteriads </h1>
-	
+	<main>
+		<img id="main-logo" src="@/assets/project-icon/Asteriads.svg" width="32" height="32" />
+		<h1> Asteriads </h1>
+		
 
-	<div
-		class="projet-external-link">
-		<hr/>
-		<a href="https://github.com/pci-ua/Aster.ia.ds"><img src="@/assets/GitHub-Mark-Light-64px.png" width="32" height="32"></a>
-		<hr/>
-	</div>
+		<section
+			class="projet-external-link">
+			<hr/>
+			<a href="https://github.com/pci-ua/Aster.ia.ds"><img src="@/assets/GitHub-Mark-Light-64px.png" width="32" height="32"></a>
+			<hr/>
+		</section>
 
 
-	<div
-		class="projet-global-info"
-		>
-		<p> Basé sur le jeu des années 80 Asteroids, Aster.ia.ds est un remake 3D de ce dernier en  C++ avec OpenGL et Qt.</p>
-		<p> Ce projet ce déroule en plusieurs étapes listé ci-dessous </p>
-		<p> En plus de la 3D, ce jeu sera multijoueur et proposera aussi bien de joué via une interface graphique que via une API permettant à ce qui le souhaite de faire joué une IA </p>
-		<p> Plus d'indication ci-dessous </p>
-	</div>
-
-	<div
-		class="projet-progress"
-		>
-		<div
-			v-for="step in steps"
-			v-on:click="setStep"
-			:class="'circle circle-'+step.status"
+		<section
+			class="projet-global-info"
 			>
-			{{step.shorttitle}}
-			<span
-				v-if="steps.indexOf(step) == selectedStep"
-				>▾</span>
-		</div>
-	</div>
+			<p> Basé sur le jeu des années 80 Asteroids, Aster.ia.ds est un remake 3D de ce dernier en  C++ avec OpenGL et Qt.</p>
+			<p> Ce projet ce déroule en plusieurs étapes listé ci-dessous </p>
+			<p> En plus de la 3D, ce jeu sera multijoueur et proposera aussi bien de joué via une interface graphique que via une API permettant à ce qui le souhaite de faire joué une IA </p>
+			<p> Plus d'indication ci-dessous </p>
+		</section>
 
-
-	<div
-		class="projet-info"
-		v-if="selectedStep"
-		>
-		<div
-			v-for="i in steps[selectedStep].info"
+		<section
+			class="projet-progress"
 			>
-			<h4> {{ i.subtitle }} </h4>
-			<p> {{ i.content }} </p>
-		</div>
-	</div>
+			<div
+				v-for="step in steps"
+				v-bind:key="step"
+				v-on:click="setStep(steps.indexOf(step))"
+				:class="'circle circle-'+step.status"
+				>
+				{{step.shorttitle}}
+				<span
+					v-if="steps.indexOf(step) == selectedStep"
+					>▾</span>
+			</div>
+		</section>
 
+
+		<section
+			class="projet-info"
+			v-if="selectedStep !== null"
+			>
+			<div
+				v-for="i in steps[selectedStep].info"
+				v-bind:key="steps.indexOf(i)"
+				>
+				<h4> {{ i.subtitle }} </h4>
+				<p> {{ i.content }} </p>
+			</div>
+		</section>
+	</main>
 </template>
 
 <script>
@@ -61,6 +64,7 @@ export default {
 				"shorttitle": "Création",
 				"status": "done",
 				"info": [
+					{"subtitle":"a","content":"a"},
 					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
 					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
 					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
@@ -109,9 +113,7 @@ export default {
 		]
 	}),
 	methods: {
-		setStep: function() {
-			this.selectedStep = Math.floor(Math.random()*this.steps.length); }
-			,
+		setStep: function(i) { this.selectedStep = i; },
 	},
 }
 
@@ -149,6 +151,7 @@ h1 {
 
 .projet-external-link hr {
 	width: 20vw;
+	margin: 1rem auto;
 }
 
 
@@ -191,14 +194,12 @@ h1 {
 
 .circle-current:before { 
 	background: radial-gradient(  lightgreen 0%, lightgreen 32%, aquamarine 45%, aquamarine 100%);
-	background-size-x: 220%;
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
 }
 .circle-current:after { 
 	background: radial-gradient(  aquamarine 0%, aquamarine 32%, lightslategray 45%, lightslategray	 100%);
-	background-size-x: 220%;
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
@@ -213,8 +214,9 @@ h1 {
 	left: 50%;
 	color: white;
 	z-index: 99;
-	transform: translate(-50%,0);
-	top: -1rem;
+	transform: translate(-50%, -50%);
+	margin: .5rem 0;
+
 }
 .projet-info {
 	width: clamp( 50% , 20rem, 98% );

@@ -1,7 +1,7 @@
 <template>
 <span id="nav-path">
 <RouterLink :to="(c='/')">/home/</RouterLink>
-<div v-for="k in $route.path.split('/').filter(k=>k!='')">
+<div v-for="k in $route.path.split('/').filter(k=>k!='')" v-bind:key="k" >
 <RouterLink :to="(c+=k+'/')">{{k}}/</RouterLink>
 </div>
 </span>
@@ -10,15 +10,15 @@
 
 <style>
 #nav-path {
-  background: -webkit-linear-gradient(0deg, #00FFFF, #618EFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(0deg, #00FFFF, #618EFF);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	background-clip: text;
 }
 
 #nav-path * {
-  text-decoration: none;
-  display: inline;
+	text-decoration: none;
+	display: inline;
 }
 
 #nav-path *:hover {

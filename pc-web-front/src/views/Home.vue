@@ -39,5 +39,10 @@ h2 {
 aside {
     font-size: 120%;
     line-height: 1.8rem;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
 }
 </style>
