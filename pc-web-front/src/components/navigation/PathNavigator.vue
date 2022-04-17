@@ -13,6 +13,7 @@
   background: -webkit-linear-gradient(0deg, #00FFFF, #618EFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 #nav-path * {
