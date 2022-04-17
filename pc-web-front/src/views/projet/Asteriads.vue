@@ -64,10 +64,9 @@ export default {
 				"shorttitle": "Création",
 				"status": "done",
 				"info": [
-					{"subtitle":"a","content":"a"},
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+					{"subtitle":"L'idée","content":"L'association ayant déjà proposé un stage équivalent l'an passé, l'idée a été reprise avec comme souhait de pousser toujours plus loins, en apprenant de nos réussites et de nos échecs. Asteroid étant choisi comme jeu de base sur l'idée, étant assez simple mais avec des mécaniques intérressantes. Après l'obtention de l'accord de M Igor Stephan responsable de la L3 informatique le projet à pu démarrer."},
+					{"subtitle":"Premieres ébauches","content":"Après un travail interne au bureau, une version a été proposer pour validation à M Stephan :  <a href=\"https://github.com/pci-ua/Aster.ia.ds/blob/8f454c33a6f03743092bd2f9dca8002556f1be57/README.md#readme\"> disponible ici </a>, version accepté et mise à disposition des étudiants pour qu'il puisse prendre connaissance du sujet et sucité des questions et d'éventuels intéressé."},
+					{"subtitle":"Dernier préparatif","content":"Après que des étudiants se soit positionner et avant le début du projet quelques dernier ajustement et préparation ont été nécessaires, tel que la configuration du git pour les étudiants et des slides de présentations plus précises avant le lancement de la seconde phase."}
 				],
 			},
 			{
@@ -75,9 +74,9 @@ export default {
 				"shorttitle": "TER",
 				"status": "current",
 				"info": [
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+					{"subtitle":"Initialisation","content":"Après une réunion de lancement avec une présentation plus exact,une partie questions-réponses les étudiants ce lance pour 8 semaine de déploiement à partir d'un projet vierge et des consignes fournis. "},
+					{"subtitle":"Dévelopement","content":"Durant les 8 semaines les étudiants auront en moyenne 3 réunions toutes les 2 semaines, avec un étudiant en master représentant de l'association qui aura pour but de les guider et répondre à leurs questions, et un autre étudiant de l'association qui sera là en tant que client qui exprimera des besoins, des souhaits, des problèmes etc."},
+					{"subtitle":"échéance","content":""},
 				],
 			},
 			{
