@@ -7,26 +7,34 @@ import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
-  <header>
-    <img alt=" " id="background" src="@/assets/BackgroundShape.svg" />
+	<div>
+		<header>
+			<NavBar />
+			<PathNavigator />
+		</header>
 
-	<NavBar />
-	<PathNavigator />
-  </header>
-  <RouterView />
-  <footer>
-    <Footer />
-  </footer>
+		<RouterView />
+
+		<footer>
+			<Footer />
+		</footer>
+	</div>
 </template>
 
 <style>
 @import '@/assets/base.css';
 
-#background {
-    position: fixed;
-    bottom: -12rem;
-    left: -3rem;
-	z-index: -1;
+body {
+	background-image: url('@/assets/BackgroundShape.svg');
+	background-repeat: no-repeat;
+	background-position-x: -2rem;
+	background-position-y: 13rem;
+	background-attachment: fixed;
+}
+
+#app {
+	background-color: #0004;
+	width: Calc(100% - .5rem);
 }
 </style>
 
