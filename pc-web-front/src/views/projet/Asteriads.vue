@@ -49,6 +49,10 @@
 				>
 				<h4> {{ i.subtitle }} </h4>
 				<p> {{ i.content }} </p>
+				<a
+					v-if="i.externalLink"
+					:href="i.externalLink"
+					target="_blank" > Lien externe </a>
 			</div>
 		</section>
 	</main>
@@ -61,11 +65,11 @@ export default {
 		steps: [
 			{ 
 				"title": "Création du sujet", 
-				"shorttitle": "Création",
+				"shorttitle": "Init",
 				"status": "done",
 				"info": [
 					{"subtitle":"L'idée","content":"L'association ayant déjà proposé un stage équivalent l'an passé, l'idée a été reprise avec comme souhait de pousser toujours plus loins, en apprenant de nos réussites et de nos échecs. Asteroid étant choisi comme jeu de base sur l'idée, étant assez simple mais avec des mécaniques intérressantes. Après l'obtention de l'accord de M Igor Stephan responsable de la L3 informatique le projet à pu démarrer."},
-					{"subtitle":"Premieres ébauches","content":"Après un travail interne au bureau, une version a été proposer pour validation à M Stephan :  <a href=\"https://github.com/pci-ua/Aster.ia.ds/blob/8f454c33a6f03743092bd2f9dca8002556f1be57/README.md#readme\"> disponible ici </a>, version accepté et mise à disposition des étudiants pour qu'il puisse prendre connaissance du sujet et sucité des questions et d'éventuels intéressé."},
+					{"subtitle":"Premieres ébauches","content":"Après un travail interne au bureau, une version a été proposer pour validation à M Stephan, version accepté et mise à disposition des étudiants pour qu'il puisse prendre connaissance du sujet et sucité des questions et d'éventuels intéressé.","externalLink":"https://github.com/pci-ua/Aster.ia.ds/blob/8f454c33a6f03743092bd2f9dca8002556f1be57/README.md#readme"},
 					{"subtitle":"Dernier préparatif","content":"Après que des étudiants se soit positionner et avant le début du projet quelques dernier ajustement et préparation ont été nécessaires, tel que la configuration du git pour les étudiants et des slides de présentations plus précises avant le lancement de la seconde phase."}
 				],
 			},
@@ -81,7 +85,7 @@ export default {
 			},
 			{
 				"title": "Amélioration, sécurisation et préparation au déploiements du jeu",
-				"shorttitle": "Upgrade",
+				"shorttitle": "MAJ",
 				"status": "later",
 				"info": [
 					{"subtitle":"Lorem ipsum","content":" dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
@@ -188,24 +192,26 @@ h1 {
 .circle-current { border-color: aquamarine; }
 .circle-done { border-color: lightgreen; }
 
-.circle-done:before { background-color: lightgreen; }
-.circle-done:after { background-color: lightgreen; }
+.circle-done:before { background-color: lightgreen; box-shadow: lightgreen -1.5rem 0; }
+.circle-done:after { background-color: lightgreen; box-shadow: lightgreen 1.5rem 0; }
 
 .circle-current:before { 
 	background: radial-gradient(  lightgreen 0%, lightgreen 32%, aquamarine 45%, aquamarine 100%);
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
+	box-shadow: lightgreen -1.5rem 0;
 }
 .circle-current:after { 
 	background: radial-gradient(  aquamarine 0%, aquamarine 32%, lightslategray 45%, lightslategray	 100%);
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
+	box-shadow: lightslategray 1.5rem 0;
 }
 
-.circle-later:before { background-color: lightslategray; }
-.circle-later:after { background-color: lightslategray; }
+.circle-later:before { background-color: lightslategray;  box-shadow: lightslategray -1.5rem 0;}
+.circle-later:after { background-color: lightslategray;  box-shadow: lightslategray 1.5rem 0;}
 
 .circle span {
 	position: absolute;
@@ -215,6 +221,7 @@ h1 {
 	z-index: 99;
 	transform: translate(-50%, -50%);
 	margin: .5rem 0;
+	    font-size: 20pt;
 
 }
 .projet-info {
@@ -226,4 +233,84 @@ h1 {
 	width: clamp( 60% , 25rem, 98% );
 	margin: auto;
 }
+
+.projet-global-info {
+  color: white;
+  font-family: mono;
+}
+
+.projet-progress {
+  width: Calc(5 * 12.5rem);
+}
+
+.projet-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 3rem;
+}
+
+.projet-info > div {
+  background-color: #0c0422;
+}
+
+.projet-info > div > p {
+  color: white;
+}
+
+.projet-info > div > h4 {
+  position: relative;
+}
+.projet-info > div > h4:after {
+  display: block;
+  height: 2px;
+  width: 2.7rem;
+  
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  
+  background-color: #618EFF;
+  content: ' ';
+}
+
+.projet-info > div {
+  position: relative;
+}
+.projet-info div:before {
+  
+  display: block;
+  height: 4rem;
+  width: 3rem;
+  
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  
+  content: ' ';
+  
+  box-shadow: #618EFF 2px -2px;  
+}
+.projet-info div:after {
+  
+  display: block;
+  height: 2rem;
+  width: 3rem;
+  
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  
+  content: ' ';
+  
+  box-shadow: #618EFF -2px 2px;  
+}
+
+.projet-info a {
+	float: right;
+	color: gray;
+	font-family: 'Zen Dots', sans-serif;
+}
+
 </style>
