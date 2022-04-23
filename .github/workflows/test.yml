@@ -2,9 +2,9 @@ name: App CI (test)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, create-test-ci ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, create-test-ci ]
 
 jobs:
   build:
@@ -23,6 +23,9 @@ jobs:
       
     - name: Run docker-compose
       uses: isbang/compose-action@v1.0.0
+      
+    - name: info
+      run: ls
       
     - name: Verification
       run: sudo make check
