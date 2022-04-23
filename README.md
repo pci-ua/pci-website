@@ -3,30 +3,44 @@
 ### Contribution
 
 
-### Setup 
+### Installation 
 
 Pour déployer localement le projet :
 
-#### Requirements
- - docker-compose 1.29.2  or newer
+#### Pré-requis
+Assurez vous d'avoir  
+ - docker-compose v1.29.2 ou plus
+ - docker v18.09.1 ou plus
+ - make v4.2.1 ou plus
+
+Ainsi qu'aucun autre serveur écoutant sur le port 8080 de votre machine
 
 #### Setup
 ```bash
 git clone https://github.com/pci-ua/pci-website.git
 cd pci-website/
-docker-compose up --build -d
+cp .env.example .env
+# éditer le .env si vous en avez besoin
+make start
 ```
 
 #### Reload
 
 Pour build manuellement l'application une fois :
 ```bash
-docker container exec pci-website_pc-web-front_1 npm run-script build
+make build
 ```
 
 Pour lancer le build automatique après chaque modification :
 ```bash
-docker container exec pci-website_pc-web-front_1 npm run-script auto-build
+make auto-build
 ```
 
 Puis accessible via [http://localhost:8080/](http://localhost:8080/)
+
+### Validiter
+
+Pour vérifier que vos modification respecte bien toutes normes :
+```bash
+make check
+```
