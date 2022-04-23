@@ -16,7 +16,7 @@
 		<section
 			class="projet-global-info"
 			>
-			<p> Basé sur le jeu des années 80 Asteroids, Aster.ia.ds est un remake 3D de ce dernier en  C++ avec OpenGL et Qt.</p>
+			<p> Basé sur le jeu des années 80 Asteroids, Aster.ia.ds est un remake 3D de ce dernier en	C++ avec OpenGL et Qt.</p>
 			<p> Ce projet ce déroule en plusieurs étapes listé ci-dessous </p>
 			<p> En plus de la 3D, ce jeu sera multijoueur et proposera aussi bien de joué via une interface graphique que via une API permettant à ce qui le souhaite de faire joué une IA </p>
 			<p> Plus d'indication ci-dessous </p>
@@ -154,9 +154,8 @@ h1 {
 
 .projet-external-link hr {
 	width: 20vw;
-	margin: 1rem auto;
+	margin: 0 auto;
 }
-
 
 .circle {
 	width: 3.5rem;
@@ -196,22 +195,22 @@ h1 {
 .circle-done:after { background-color: lightgreen; box-shadow: lightgreen 1.5rem 0; }
 
 .circle-current:before { 
-	background: radial-gradient(  lightgreen 0%, lightgreen 32%, aquamarine 45%, aquamarine 100%);
+	background: radial-gradient(	lightgreen 0%, lightgreen 32%, aquamarine 45%, aquamarine 100%);
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
 	box-shadow: lightgreen -1.5rem 0;
 }
 .circle-current:after { 
-	background: radial-gradient(  aquamarine 0%, aquamarine 32%, lightslategray 45%, lightslategray	 100%);
+	background: radial-gradient(	aquamarine 0%, aquamarine 32%, lightslategray 45%, lightslategray	 100%);
 	background-position-x: 90%;
 	background-size: 220% 200%;
 	background-position-y: 50%;
 	box-shadow: lightslategray 1.5rem 0;
 }
 
-.circle-later:before { background-color: lightslategray;  box-shadow: lightslategray -1.5rem 0;}
-.circle-later:after { background-color: lightslategray;  box-shadow: lightslategray 1.5rem 0;}
+.circle-later:before { background-color: lightslategray;	box-shadow: lightslategray -1.5rem 0;}
+.circle-later:after { background-color: lightslategray;	box-shadow: lightslategray 1.5rem 0;}
 
 .circle span {
 	position: absolute;
@@ -221,11 +220,11 @@ h1 {
 	z-index: 99;
 	transform: translate(-50%, -50%);
 	margin: .5rem 0;
-	    font-size: 20pt;
+			font-size: 20pt;
 
 }
 .projet-info {
-	width: clamp( 50% , 20rem, 98% );
+	width: clamp( 80% , 50rem, 98% );
 	margin: auto;
 }
 
@@ -235,76 +234,76 @@ h1 {
 }
 
 .projet-global-info {
-  color: white;
-  font-family: mono;
+	color: white;
+	font-family: mono;
 }
 
 .projet-progress {
-  width: Calc(5 * 12.5rem);
+	width: Calc(5 * 12.5rem);
 }
 
 .projet-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 28rem);
-  justify-content: center;
-  align-items: center;
-  grid-gap: 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 25rem);
+	justify-content: center;
+	align-items: center;
+	grid-gap: 3rem;
 }
 
 .projet-info > div {
-  background-color: #0c0422;
+	background-color: #0c0422;
 }
 
 .projet-info > div > p {
-  color: white;
+	color: white;
 }
 
 .projet-info > div > h4 {
-  position: relative;
+	position: relative;
 }
 .projet-info > div > h4:after {
-  display: block;
-  height: 2px;
-  width: 2.7rem;
-  
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  
-  background-color: #618EFF;
-  content: ' ';
+	display: block;
+	height: 2px;
+	width: 2.7rem;
+	
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	
+	background-color: #618EFF;
+	content: ' ';
 }
 
 .projet-info > div {
-  position: relative;
+	position: relative;
 }
 .projet-info div:before {
-  
-  display: block;
-  height: 4rem;
-  width: 3rem;
-  
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  
-  content: ' ';
-  
-  box-shadow: #618EFF 2px -2px;  
+	
+	display: block;
+	height: 4rem;
+	width: 3rem;
+	
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	
+	content: ' ';
+	
+	box-shadow: #618EFF 2px -2px;	
 }
 .projet-info div:after {
-  
-  display: block;
-  height: 2rem;
-  width: 3rem;
-  
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  
-  content: ' ';
-  
-  box-shadow: #618EFF -2px 2px;  
+	
+	display: block;
+	height: 2rem;
+	width: 3rem;
+	
+	position: absolute;
+	bottom: -2px;
+	left: -2px;
+	
+	content: ' ';
+	
+	box-shadow: #618EFF -2px 2px;	
 }
 
 .projet-info a {

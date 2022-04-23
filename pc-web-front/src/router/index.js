@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/Home.vue'
-import MentionsLegalesView from '../views/MentionsLegales.vue'
+import HomeView from '../views/HomePage.vue'
+import MentionsLegalesView from '../views/MentionsLegalesPage.vue'
 
-import Projet_MinecraftView from '../views/projet/Minecraft.vue'
-import Projet_AsteriadsView from '../views/projet/Asteriads.vue'
+import Projet_MinecraftView from '../views/projet/MinecraftPage.vue'
+import Projet_AsteriadsView from '../views/projet/AsteriadsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'HomePage',
       component: HomeView
     },
     {
@@ -21,12 +21,12 @@ const router = createRouter({
     },
 	{
 		path: '/projet/minecraft',
-		name: 'Minecraft',
+		name: 'MinecraftPage',
 		component: Projet_MinecraftView
 	},
 	{
 		path: '/projet/asteriads',
-		name: 'Asteriads',
+		name: 'AsteriadsPage',
 		component: Projet_AsteriadsView
 	}
   ]
