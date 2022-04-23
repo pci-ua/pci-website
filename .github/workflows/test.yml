@@ -18,8 +18,8 @@ jobs:
     - name: Setup environment
       run: cp .env.example .env
     - name: Verification
-      run: make check
+      run: sudo make check
     - name: Start app
-      run: make start
+      run: sudo make start
     - name: Stop app
-      run: make stop
+      run: sudo make stop
