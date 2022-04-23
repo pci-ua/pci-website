@@ -1,5 +1,7 @@
 # PC[i] Site web
 
+[![App CI (test)](https://github.com/pci-ua/pci-website/actions/workflows/test.yml/badge.svg)](https://github.com/pci-ua/pci-website/actions/workflows/test.yml)
+
 ### Contribution
 
 

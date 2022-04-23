@@ -17,4 +17,4 @@ auto-build:
 check: check-syntax
 
 check-syntax:
-	docker-compose exec -T pc-web-front npm run lint
+	docker-compose exec pc-web-front npm run lint
