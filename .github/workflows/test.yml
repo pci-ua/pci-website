@@ -24,8 +24,5 @@ jobs:
     - name: Run docker-compose
       uses: isbang/compose-action@v1.0.0
       
-    - name: info
-      run: docker-compose exec -T pc-web-front ls
-      
     - name: Verification
-      run: sudo make build check
+      run: sudo docker-compose exec pc-web-front npm run build && sudo docker-compose exec pc-web-front npm run check
