@@ -1,8 +1,8 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import NavBar from '@/components/navigation/NavBar.vue'
 import PathNavigator from '@/components/navigation/PathNavigator.vue'
-import Footer from '@/components/Footer.vue'
+import Footer from '@/components/GenericFooter.vue'
 
 </script>
 
