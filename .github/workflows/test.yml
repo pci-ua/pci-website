@@ -17,6 +17,8 @@ jobs:
       run: sudo apt update -yq && sudo apt install build-essential docker docker-compose -yq
     - name: Setup environment
       run: cp .env.example .env
+    - name: test
+      run: systemctl status docker
     - name: Verification
       run: sudo make check
     - name: Start app
