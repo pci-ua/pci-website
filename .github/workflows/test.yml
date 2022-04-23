@@ -18,7 +18,7 @@ jobs:
     - name: Setup environment
       run: cp .env.example .env
     - name: test
-      run: systemctl status docker
+      run: sudo systemctl status docker
     - name: Verification
       run: sudo make check
     - name: Start app
