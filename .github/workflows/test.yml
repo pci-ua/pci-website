@@ -2,9 +2,9 @@ name: App CI (test)
 
 on:
   push:
-    branches: [ main, create-test-ci ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, create-test-ci ]
+    branches: [ main ]
 
 jobs:
   build:
