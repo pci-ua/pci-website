@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      run: apt update -yq && apt install build-essential docker docker-compose -yq
+      run: sudo apt update -yq && sudo apt install build-essential docker docker-compose -yq
     - name: Setup environment
       run: cp .env.example .env
     - name: Verification
