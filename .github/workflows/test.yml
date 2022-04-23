@@ -1,0 +1,28 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: App CI (test)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: debian-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: apt update -yq && apt install build-essential docker docker-compose -yq
+    - name: Setup environment
+      run: cp .env.example .env
+    - name: Verification
+      run: make check
+    - name: Start app
+      run: make start
+    - name: Stop app
+      run: make stop
