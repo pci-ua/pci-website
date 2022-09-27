@@ -35,7 +35,7 @@ html, body {
 html {
 	font-family: 'Nunito', monospace;
 	background-color: var(--color-bg);
-	color: var(--color-text);
+	color: white; /*var(--color-text);*/
 }
 
 h1, h2, h3,
