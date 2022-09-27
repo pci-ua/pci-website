@@ -19,7 +19,7 @@ jobs:
     steps:
     
     - name: ⤓ Installation (1/2)
-      run: wget https://deb.nodesource.com/setup_18.x -O ./setup_node_18.sh && chmod -x setup_node_18.sh && sudo ./setup_node_18.sh
+      run: wget https://deb.nodesource.com/setup_18.x -O ./setup_node_18.sh && chmod -x setup_node_18.sh && sudo bash ./setup_node_18.sh
       
     - name: ⤓ Checkout
       uses: actions/checkout@v3
